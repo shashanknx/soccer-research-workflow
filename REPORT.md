@@ -1,6 +1,6 @@
 # Market Research Report: Soccer Equipment and Training Market Research
 
-**Generated on:** 2026-01-22 04:04:19
+**Generated on:** 2026-01-22 04:20:18
 
 ---
 
@@ -11,11 +11,11 @@ This report presents findings from a comprehensive market research study on Socc
 ### Key Findings
 
 
-1. **Focus on Find Quality Equipment** - Most common job-to-be-done (75 occurrences)
+1. **Focus on General Inquiry** - Most common job-to-be-done (100 occurrences)
 
-2. **Create content about Youth Soccer** - Most discussed theme (150 mentions)
+2. **Create content about Comparison** - Most discussed theme (100 mentions)
 
-3. **Prioritize Parents Segment** - Highest average engagement (1426.5)
+3. **Prioritize Engaged Fan Segment** - Highest average engagement (14261.4)
 
 
 ---
@@ -43,10 +43,25 @@ This report presents findings from a comprehensive market research study on Socc
 ### Target Segments
 
 
-#### Parents
+#### Bettor
 
-- **Count:** 150 items (100.0%)
-- **Average Engagement:** 1426.5
+- **Count:** 66 items (44.0%)
+- **Average Engagement:** 67.3
+
+#### Engaged Fan
+
+- **Count:** 50 items (33.3%)
+- **Average Engagement:** 14261.4
+
+#### General
+
+- **Count:** 17 items (11.3%)
+- **Average Engagement:** 177.0
+
+#### Fantasy Enthusiast
+
+- **Count:** 17 items (11.3%)
+- **Average Engagement:** 232.0
 
 
 ---
@@ -56,11 +71,11 @@ This report presents findings from a comprehensive market research study on Socc
 Understanding when and why users engage with soccer-related content and products:
 
 
-- **Purchasing Decision**: 55 occurrences (36.7%)
+- **Evergreen**: 117 occurrences (78.0%)
 
-- **Entertainment**: 50 occurrences (33.3%)
+- **General Interest**: 17 occurrences (11.3%)
 
-- **Skill Development**: 45 occurrences (30.0%)
+- **Weekly**: 16 occurrences (10.7%)
 
 
 ---
@@ -70,11 +85,9 @@ Understanding when and why users engage with soccer-related content and products
 What users are trying to accomplish:
 
 
-- **Find Quality Equipment**: 75 occurrences (50.0%)
+- **General Inquiry**: 100 occurrences (66.7%)
 
-- **Understand Tactics**: 50 occurrences (33.3%)
-
-- **Improve Skills**: 25 occurrences (16.7%)
+- **Social Currency**: 50 occurrences (33.3%)
 
 
 ---
@@ -84,25 +97,25 @@ What users are trying to accomplish:
 ### Top Themes
 
 
-#### Youth Soccer
+#### Comparison
 
-- **Mentions:** 150 (50.0% of all themes)
-- **Related Themes:** equipment (75), training (45), technology (30)
+- **Mentions:** 100 (45.5% of all themes)
+- **Related Themes:** shareability (50), explainability (20)
 
-#### Equipment
+#### General
 
-- **Mentions:** 75 (25.0% of all themes)
-- **Related Themes:** youth_soccer (75), technology (30), training (20)
+- **Mentions:** 50 (22.7% of all themes)
+- **Related Themes:** 
 
-#### Training
+#### Shareability
 
-- **Mentions:** 45 (15.0% of all themes)
-- **Related Themes:** youth_soccer (45), equipment (20)
+- **Mentions:** 50 (22.7% of all themes)
+- **Related Themes:** comparison (50)
 
-#### Technology
+#### Explainability
 
-- **Mentions:** 30 (10.0% of all themes)
-- **Related Themes:** equipment (30), youth_soccer (30)
+- **Mentions:** 20 (9.1% of all themes)
+- **Related Themes:** comparison (20)
 
 
 ---
@@ -113,11 +126,11 @@ What users are trying to accomplish:
 
 
 
-- **Neutral**: 38 items (25.3%)
+- **Positive**: 97 items (64.7%)
 
 
 
-- **Positive**: 112 items (74.7%)
+- **Neutral**: 53 items (35.3%)
 
 
 
@@ -126,11 +139,26 @@ What users are trying to accomplish:
 ### Sentiment by Segment
 
 
-**Parents:**
+**General:**
 
-  - Neutral: 38
+  - Positive: 17
 
-  - Positive: 112
+
+**Fantasy Enthusiast:**
+
+  - Positive: 17
+
+
+**Bettor:**
+
+  - Neutral: 53
+
+  - Positive: 13
+
+
+**Engaged Fan:**
+
+  - Positive: 50
 
 
 
@@ -141,123 +169,123 @@ What users are trying to accomplish:
 Based on engagement metrics, here are the most impactful evidence items:
 
 
-### 1. Best Soccer Cleats Review 1995
+### 1. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 8369
+- **Engagement Score:** 31146
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 2. Best Soccer Cleats Review 1996
+### 2. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 8263
+- **Engagement Score:** 30628
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 3. Best Soccer Cleats Review 1997
+### 3. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 8157
+- **Engagement Score:** 30110
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 4. Best Soccer Cleats Review 1998
+### 4. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 8051
+- **Engagement Score:** 29592
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 5. Best Soccer Cleats Review 1999
+### 5. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 7945
+- **Engagement Score:** 29074
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 6. Best Soccer Cleats Review 2000
+### 6. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 7839
+- **Engagement Score:** 28556
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 7. Best Soccer Cleats Review 2001
+### 7. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 7733
+- **Engagement Score:** 28038
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 8. Best Soccer Cleats Review 2002
+### 8. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 7627
+- **Engagement Score:** 27520
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 9. Best Soccer Cleats Review 2003
+### 9. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 7521
+- **Engagement Score:** 27002
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
-### 10. Best Soccer Cleats Review 2004
+### 10. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Parents
-- **Themes:** equipment, youth_soccer, technology
+- **Segment:** Engaged Fan
+- **Themes:** comparison
 - **Sentiment:** Positive
-- **Engagement Score:** 7415
+- **Engagement Score:** 26484
 
-**Content:** In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.
+**Content:** Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!
 
 ---
 
@@ -269,43 +297,43 @@ Based on engagement metrics, here are the most impactful evidence items:
 Based on the analysis of 150 evidence items, we recommend the following strategic actions:
 
 
-### 1. Focus on Find Quality Equipment
+### 1. Focus on General Inquiry
 
 - **Type:** Feature
-- **Target Segment:** Parents
+- **Target Segment:** Engaged Fan
 - **Confidence Level:** High
 
-**Rationale:** Most common job-to-be-done (75 occurrences)
+**Rationale:** Most common job-to-be-done (100 occurrences)
 
 ---
 
-### 2. Create content about Youth Soccer
+### 2. Create content about Comparison
 
 - **Type:** Content
 - **Target Segment:** All Segments
 - **Confidence Level:** High
 
-**Rationale:** Most discussed theme (150 mentions)
+**Rationale:** Most discussed theme (100 mentions)
 
 ---
 
-### 3. Prioritize Parents Segment
+### 3. Prioritize Engaged Fan Segment
 
 - **Type:** Strategy
-- **Target Segment:** Parents
+- **Target Segment:** Engaged Fan
 - **Confidence Level:** Medium
 
-**Rationale:** Highest average engagement (1426.5)
+**Rationale:** Highest average engagement (14261.4)
 
 ---
 
-### 5. Highlight success in Youth Soccer
+### 5. Highlight success in Comparison
 
 - **Type:** Marketing
 - **Target Segment:** All Segments
 - **Confidence Level:** High
 
-**Rationale:** Strong positive sentiment (112 positive mentions)
+**Rationale:** Strong positive sentiment (97 positive mentions)
 
 ---
 
@@ -329,9 +357,9 @@ Reddit, Youtube, App_Store, Media
 
 ### Classification Framework
 
-- **Segments:** 1 distinct user segments identified
+- **Segments:** 4 distinct user segments identified
 - **Moments:** 3 user moments analyzed
-- **Jobs:** 3 jobs-to-be-done categorized
+- **Jobs:** 2 jobs-to-be-done categorized
 - **Themes:** 4 themes clustered
 - **Sentiment:** 4-point scale (positive, negative, neutral, mixed)
 
