@@ -1,0 +1,185 @@
+# Market Research Report: {{ research_topic }}
+
+**Generated on:** {{ generation_date }}
+
+---
+
+## Executive Summary
+
+This report presents findings from a comprehensive market research study on {{ research_topic }}. We analyzed **{{ total_items }}** evidence items from multiple sources including {{ sources }}.
+
+### Key Findings
+
+{% for rec in top_recommendations %}
+{{ loop.index }}. **{{ rec.title }}** - {{ rec.rationale }}
+{% endfor %}
+
+---
+
+## Data Collection Overview
+
+### Sources Analyzed
+
+{% for source, data in sources_analyzed.items() %}
+- **{{ source.title() }}**: {{ data.count }} items ({{ data.percentage }}%)
+{% endfor %}
+
+**Total Evidence Items:** {{ total_items }}
+
+---
+
+## Segment Analysis
+
+### Target Segments
+
+{% for segment, data in segment_insights.items() %}
+#### {{ segment.replace('_', ' ').title() }}
+
+- **Count:** {{ data.count }} items ({{ data.percentage }}%)
+- **Average Engagement:** {{ data.avg_engagement }}
+{% endfor %}
+
+---
+
+## User Moments
+
+Understanding when and why users engage with soccer-related content and products:
+
+{% for moment, data in moment_insights.items() %}
+- **{{ moment.replace('_', ' ').title() }}**: {{ data.count }} occurrences ({{ data.percentage }}%)
+{% endfor %}
+
+---
+
+## Jobs-to-be-Done
+
+What users are trying to accomplish:
+
+{% for job, data in job_insights.items() %}
+- **{{ job.replace('_', ' ').title() }}**: {{ data.count }} occurrences ({{ data.percentage }}%)
+{% endfor %}
+
+---
+
+## Theme Analysis
+
+### Top Themes
+
+{% for theme, data in theme_clusters.items() %}
+#### {{ theme.replace('_', ' ').title() }}
+
+- **Mentions:** {{ data.count }} ({{ data.percentage }}% of all themes)
+- **Related Themes:** {% for related, count in data.related_themes.items() %}{{ related }} ({{ count }}){% if not loop.last %}, {% endif %}{% endfor %}
+{% endfor %}
+
+---
+
+## Sentiment Analysis
+
+### Overall Sentiment Distribution
+
+{% for sentiment, data in sentiment_analysis.items() %}
+{% if sentiment != 'by_segment' %}
+- **{{ sentiment.title() }}**: {{ data.count }} items ({{ data.percentage }}%)
+{% endif %}
+{% endfor %}
+
+### Sentiment by Segment
+
+{% for segment, sentiments in sentiment_analysis.by_segment.items() %}
+**{{ segment.replace('_', ' ').title() }}:**
+{% for sentiment, count in sentiments.items() %}
+  - {{ sentiment.title() }}: {{ count }}
+{% endfor %}
+{% endfor %}
+
+---
+
+## Top Evidence Items
+
+Based on engagement metrics, here are the most impactful evidence items:
+
+{% for item in top_evidence %}
+### {{ loop.index }}. {{ item.title or 'Untitled' }}
+
+- **Source:** {{ item.source.title() }}
+- **Segment:** {{ item.segment.replace('_', ' ').title() }}
+- **Themes:** {{ item.themes|join(', ') }}
+- **Sentiment:** {{ item.sentiment.title() }}
+- **Engagement Score:** {{ item.engagement }}
+
+**Content:** {{ item.content }}
+
+---
+{% endfor %}
+
+---
+
+## Product Recommendations
+
+Based on the analysis of {{ total_items }} evidence items, we recommend the following strategic actions:
+
+{% for rec in recommendations %}
+### {{ rec.priority }}. {{ rec.title }}
+
+- **Type:** {{ rec.type }}
+- **Target Segment:** {{ rec.target_segment.replace('_', ' ').title() }}
+- **Confidence Level:** {{ rec.confidence.title() }}
+
+**Rationale:** {{ rec.rationale }}
+
+---
+{% endfor %}
+
+---
+
+## Methodology
+
+### Data Collection
+
+Data was collected from the following sources:
+{{ sources }}
+
+### Analysis Process
+
+1. **Planning:** Research plan generated with quotas and stop conditions
+2. **Collection:** Raw data fetched from configured sources
+3. **Extraction:** Data normalized into EvidenceItem schema
+4. **Tagging:** Items classified by segment, moment, job, themes, and sentiment
+5. **Synthesis:** Aggregated analysis and recommendation generation
+
+### Classification Framework
+
+- **Segments:** {{ segment_count }} distinct user segments identified
+- **Moments:** {{ moment_count }} user moments analyzed
+- **Jobs:** {{ job_count }} jobs-to-be-done categorized
+- **Themes:** {{ theme_count }} themes clustered
+- **Sentiment:** 4-point scale (positive, negative, neutral, mixed)
+
+---
+
+## Appendix: Complete Evidence Dataset
+
+A complete CSV file containing all {{ total_items }} evidence items with tags and classifications is available as `evidence.csv`.
+
+### CSV Columns
+
+- **id**: Unique identifier
+- **source**: Data source platform
+- **source_type**: Type of content
+- **title**: Content title
+- **content**: Main text content
+- **author**: Content author
+- **published_at**: Publication timestamp
+- **collected_at**: Collection timestamp
+- **engagement_total**: Total engagement score
+- **segment**: User segment classification
+- **moment**: User moment classification
+- **job**: Job-to-be-done classification
+- **themes**: Identified themes (comma-separated)
+- **sentiment**: Sentiment classification
+- **source_url**: Original URL
+
+---
+
+*This report was generated by the Agentic AI Market-Research System*
