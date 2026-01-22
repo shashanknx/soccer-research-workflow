@@ -44,7 +44,7 @@ def run_pipeline(use_mock_data: bool = True):
     planner = PlannerAgent(topic="Soccer equipment and training market research")
     plan = planner.create_plan()
     planner.print_plan_summary(plan)
-    plan_path = planner.save_plan()
+    plan_path = planner.save_plan(plan)
     
     print("\n" + "="*60)
     print("STEP 2: DATA COLLECTION")

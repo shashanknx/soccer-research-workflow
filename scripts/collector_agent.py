@@ -130,25 +130,25 @@ class CollectorAgent:
             {
                 "source": "reddit",
                 "source_type": "post",
-                "source_url": f"https://reddit.com/r/soccer/comments/{i}",
-                "title": f"Discussion about soccer equipment {i}",
+                "source_url": "https://reddit.com/r/soccer/comments/{i}",
+                "title": "Discussion about soccer equipment {i}",
                 "content": "Looking for advice on youth soccer cleats. What brands do you recommend for durability and comfort?",
-                "author": f"user_{i}",
+                "author": "user_{i}",
                 "published_at": datetime.now().isoformat(),
-                "upvotes": 15 + i,
-                "comments": 8 + i,
+                "upvotes": 15,
+                "comments": 8,
                 "subreddit": "soccer"
             },
             {
                 "source": "reddit",
                 "source_type": "post",
-                "source_url": f"https://reddit.com/r/bootroom/comments/{i}",
-                "title": f"Training tips for youth players {i}",
+                "source_url": "https://reddit.com/r/bootroom/comments/{i}",
+                "title": "Training tips for youth players {i}",
                 "content": "My son just joined a competitive team. What training equipment should we get for home practice?",
-                "author": f"soccer_parent_{i}",
+                "author": "soccer_parent_{i}",
                 "published_at": datetime.now().isoformat(),
-                "upvotes": 25 + i,
-                "comments": 12 + i,
+                "upvotes": 25,
+                "comments": 12,
                 "subreddit": "bootroom"
             }
         ]
