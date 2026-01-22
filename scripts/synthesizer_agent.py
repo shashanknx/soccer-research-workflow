@@ -290,9 +290,11 @@ class SynthesizerAgent:
             avg_engagements = {
                 seg: sum(engs) / len(engs)
                 for seg, engs in segment_engagement.items()
+                if engs  # Ensure list is not empty
             }
-            top_segment = max(avg_engagements, key=avg_engagements.get)
-            return top_segment, avg_engagements[top_segment]
+            if avg_engagements:
+                top_segment = max(avg_engagements, key=avg_engagements.get)
+                return top_segment, avg_engagements[top_segment]
         
         return None, 0
     

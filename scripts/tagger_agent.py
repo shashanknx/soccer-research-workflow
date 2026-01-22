@@ -110,7 +110,7 @@ class TaggerAgent:
             Tagged EvidenceItem object
         """
         # Combine title and content for analysis
-        text = f"{item.title or ''} {item.content}".lower()
+        text = f"{item.title or ''} {item.content}".strip().lower()
         
         # Tag segment
         item.segment = self._classify_segment(text)
