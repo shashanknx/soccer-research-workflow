@@ -22,15 +22,19 @@ class ReportGenerator:
     Report Generator creates comprehensive markdown reports and CSV data exports.
     """
     
-    def __init__(self, template_path: str = "templates/report_template.md"):
+    def __init__(self, template_path: str = "templates/report_template.md", use_rq_template: bool = False):
         """
         Initialize the Report Generator.
         
         Args:
             template_path: Path to Jinja2 template file
+            use_rq_template: If True, use RQ-driven template
         """
+        if use_rq_template:
+            template_path = "templates/report_rq_template.md"
         self.template_path = Path(template_path)
         self.template = self._load_template()
+        self.use_rq_template = use_rq_template
     
     def _load_template(self) -> Template:
         """Load the Jinja2 template."""
@@ -91,6 +95,25 @@ class ReportGenerator:
         Returns:
             Context dictionary for template
         """
+        # Check if using RQ-driven synthesis
+        if "rq1" in synthesis_results:
+            # RQ-driven context (new format)
+            from datetime import datetime
+            context = {
+                "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "totals": synthesis_results.get("totals", {}),
+                "exec_decisions": synthesis_results.get("exec_decisions", {}),
+                "rq1": synthesis_results.get("rq1", {}),
+                "rq2": synthesis_results.get("rq2", {}),
+                "rq3": synthesis_results.get("rq3", {}),
+                "rq4": synthesis_results.get("rq4", {}),
+                "rq5": synthesis_results.get("rq5", {}),
+                "blueprint": synthesis_results.get("blueprint", {}),
+                "qa": synthesis_results.get("qa", {})
+            }
+            return context
+        
+        # Legacy context (old format)
         # Get unique sources
         sources = list(synthesis_results.get("sources_analyzed", {}).keys())
         sources_str = ", ".join(s.title() for s in sources)

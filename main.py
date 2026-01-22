@@ -74,21 +74,20 @@ def run_pipeline(use_mock_data: bool = True):
     tagged_path = tagger.save_tagged_items(tagged_items)
     
     print("\n" + "="*60)
-    print("STEP 5: SYNTHESIS & ANALYSIS")
+    print("STEP 5: SYNTHESIS & ANALYSIS (RQ-DRIVEN)")
     print("="*60)
     
-    # Step 5: Synthesize and analyze
+    # Step 5: Synthesize and analyze using RQ-driven framework
     synthesizer = SynthesizerAgent(research_plan=plan)
-    synthesis_results = synthesizer.synthesize(tagged_items)
-    synthesizer.print_summary()
+    synthesis_results = synthesizer.synthesize_rq_driven(tagged_items)
     synthesis_path = synthesizer.save_synthesis()
     
     print("\n" + "="*60)
-    print("STEP 6: REPORT GENERATION")
+    print("STEP 6: REPORT GENERATION (RQ-DRIVEN)")
     print("="*60)
     
-    # Step 6: Generate report
-    generator = ReportGenerator()
+    # Step 6: Generate report using RQ-driven template
+    generator = ReportGenerator(use_rq_template=True)
     generator.generate_full_report(
         synthesis_path=synthesis_path,
         evidence_path=tagged_path,
