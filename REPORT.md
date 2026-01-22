@@ -1,21 +1,21 @@
-# Market Research Report: Soccer Equipment and Training Market Research
+# Market Research Report: Billboard-style soccer player rankings app - product de-risking research
 
-**Generated on:** 2026-01-22 04:30:40
+**Generated on:** 2026-01-22 04:38:50
 
 ---
 
 ## Executive Summary
 
-This report presents findings from a comprehensive market research study on Soccer Equipment and Training Market Research. We analyzed **150** evidence items from multiple sources including Reddit, Youtube, App_Store, Media.
+This report presents findings from a comprehensive market research study on Billboard-style soccer player rankings app - product de-risking research. We analyzed **150** evidence items from multiple sources including Reddit, Youtube, App_Store, Media.
 
 ### Key Findings
 
 
-1. **Focus on General Inquiry** - Most common job-to-be-done (100 occurrences)
+1. **Focus on General Inquiry** - Most common job-to-be-done (70 occurrences)
 
 2. **Create content about Comparison** - Most discussed theme (100 mentions)
 
-3. **Prioritize Engaged Fan Segment** - Highest average engagement (14261.4)
+3. **Prioritize Engaged Segment** - Highest average engagement (14261.4)
 
 
 ---
@@ -48,7 +48,7 @@ This report presents findings from a comprehensive market research study on Socc
 - **Count:** 66 items (44.0%)
 - **Average Engagement:** 67.3
 
-#### Engaged Fan
+#### Engaged
 
 - **Count:** 50 items (33.3%)
 - **Average Engagement:** 14261.4
@@ -58,7 +58,7 @@ This report presents findings from a comprehensive market research study on Socc
 - **Count:** 17 items (11.3%)
 - **Average Engagement:** 177.0
 
-#### Fantasy Enthusiast
+#### Fantasy
 
 - **Count:** 17 items (11.3%)
 - **Average Engagement:** 232.0
@@ -71,11 +71,11 @@ This report presents findings from a comprehensive market research study on Socc
 Understanding when and why users engage with soccer-related content and products:
 
 
-- **Evergreen**: 117 occurrences (78.0%)
+- **General Interest**: 84 occurrences (56.0%)
 
-- **General Interest**: 17 occurrences (11.3%)
+- **Bettingresearch**: 50 occurrences (33.3%)
 
-- **Weekly**: 16 occurrences (10.7%)
+- **Weeklyformcheck**: 16 occurrences (10.7%)
 
 
 ---
@@ -85,9 +85,11 @@ Understanding when and why users engage with soccer-related content and products
 What users are trying to accomplish:
 
 
-- **General Inquiry**: 100 occurrences (66.7%)
+- **General Inquiry**: 70 occurrences (46.7%)
 
-- **Social Currency**: 50 occurrences (33.3%)
+- **Trackingtrendmovement**: 63 occurrences (42.0%)
+
+- **Debatestatusprovemytake**: 17 occurrences (11.3%)
 
 
 ---
@@ -100,7 +102,7 @@ What users are trying to accomplish:
 #### Comparison
 
 - **Mentions:** 100 (45.5% of all themes)
-- **Related Themes:** shareability (50), explainability (20)
+- **Related Themes:** Shareability (50), Explainability (20)
 
 #### General
 
@@ -110,12 +112,12 @@ What users are trying to accomplish:
 #### Shareability
 
 - **Mentions:** 50 (22.7% of all themes)
-- **Related Themes:** comparison (50)
+- **Related Themes:** Comparison (50)
 
 #### Explainability
 
 - **Mentions:** 20 (9.1% of all themes)
-- **Related Themes:** comparison (20)
+- **Related Themes:** Comparison (20)
 
 
 ---
@@ -144,7 +146,7 @@ What users are trying to accomplish:
   - Positive: 17
 
 
-**Fantasy Enthusiast:**
+**Fantasy:**
 
   - Positive: 17
 
@@ -156,7 +158,7 @@ What users are trying to accomplish:
   - Positive: 13
 
 
-**Engaged Fan:**
+**Engaged:**
 
   - Positive: 50
 
@@ -172,8 +174,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 1. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 31146
 
@@ -184,8 +186,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 2. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 30628
 
@@ -196,8 +198,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 3. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 30110
 
@@ -208,8 +210,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 4. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 29592
 
@@ -220,8 +222,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 5. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 29074
 
@@ -232,8 +234,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 6. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 28556
 
@@ -244,8 +246,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 7. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 28038
 
@@ -256,8 +258,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 8. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 27520
 
@@ -268,8 +270,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 9. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 27002
 
@@ -280,8 +282,8 @@ Based on engagement metrics, here are the most impactful evidence items:
 ### 10. Top 10 Players in the World Right Now | 2024 Rankings
 
 - **Source:** Youtube
-- **Segment:** Engaged Fan
-- **Themes:** comparison
+- **Segment:** Engaged
+- **Themes:** Comparison
 - **Sentiment:** Positive
 - **Engagement Score:** 26484
 
@@ -300,10 +302,10 @@ Based on the analysis of 150 evidence items, we recommend the following strategi
 ### 1. Focus on General Inquiry
 
 - **Type:** Feature
-- **Target Segment:** Engaged Fan
+- **Target Segment:** Bettor
 - **Confidence Level:** High
 
-**Rationale:** Most common job-to-be-done (100 occurrences)
+**Rationale:** Most common job-to-be-done (70 occurrences)
 
 ---
 
@@ -317,10 +319,10 @@ Based on the analysis of 150 evidence items, we recommend the following strategi
 
 ---
 
-### 3. Prioritize Engaged Fan Segment
+### 3. Prioritize Engaged Segment
 
 - **Type:** Strategy
-- **Target Segment:** Engaged Fan
+- **Target Segment:** Engaged
 - **Confidence Level:** Medium
 
 **Rationale:** Highest average engagement (14261.4)
@@ -359,7 +361,7 @@ Reddit, Youtube, App_Store, Media
 
 - **Segments:** 4 distinct user segments identified
 - **Moments:** 3 user moments analyzed
-- **Jobs:** 2 jobs-to-be-done categorized
+- **Jobs:** 3 jobs-to-be-done categorized
 - **Themes:** 4 themes clustered
 - **Sentiment:** 4-point scale (positive, negative, neutral, mixed)
 

@@ -19,9 +19,10 @@ class SynthesizerAgent:
     Synthesizer Agent aggregates evidence and generates insights.
     """
     
-    def __init__(self):
+    def __init__(self, research_plan=None):
         """Initialize the Synthesizer Agent."""
         self.synthesis_results = {}
+        self.research_plan = research_plan
     
     def synthesize(self, evidence_items: List[EvidenceItem]) -> Dict[str, Any]:
         """
@@ -36,6 +37,7 @@ class SynthesizerAgent:
         print("\nStarting synthesis process...")
         
         results = {
+            "research_topic": self.research_plan.research_topic if self.research_plan else "Billboard-style soccer player rankings app - product de-risking research",
             "total_items": len(evidence_items),
             "sources_analyzed": self._analyze_sources(evidence_items),
             "segment_insights": self._analyze_segments(evidence_items),

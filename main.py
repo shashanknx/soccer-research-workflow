@@ -78,7 +78,7 @@ def run_pipeline(use_mock_data: bool = True):
     print("="*60)
     
     # Step 5: Synthesize and analyze
-    synthesizer = SynthesizerAgent()
+    synthesizer = SynthesizerAgent(research_plan=plan)
     synthesis_results = synthesizer.synthesize(tagged_items)
     synthesizer.print_summary()
     synthesis_path = synthesizer.save_synthesis()

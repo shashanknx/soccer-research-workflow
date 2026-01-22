@@ -23,45 +23,47 @@ class TaggerAgent:
     def __init__(self):
         """Initialize the Tagger Agent with tagging rules for Billboard player rankings research."""
         
-        # Segment classification rules (Billboard player rankings focus)
+        # Segment classification rules (NO "General" segment - strict enum)
         self.segment_rules = {
-            "potential_fan": ["new to soccer", "getting into", "don't know much", "learning about", "just started watching", "beginner"],
-            "casual_fan": ["watch occasionally", "big games", "world cup", "casual", "highlights", "don't follow closely"],
-            "engaged_fan": ["follow closely", "know the players", "watch every game", "fan forum", "statistics", "analysis", "tactics"],
-            "bettor": ["bet", "odds", "gambling", "wager", "prediction", "betting", "stake", "parlay"],
-            "fantasy_enthusiast": ["fantasy", "FPL", "fantasy premier league", "draft", "team selection", "points", "captain"]
+            "Potential": ["new to soccer", "getting into", "don't know much", "learning about", "just started watching", "beginner", "don't understand"],
+            "Casual": ["watch occasionally", "big games", "world cup", "casual", "highlights", "don't follow closely", "big matches only"],
+            "Engaged": ["follow closely", "know the players", "watch every game", "fan forum", "statistics", "analysis", "tactics", "every match"],
+            "Bettor": ["bet", "odds", "gambling", "wager", "prediction", "betting", "stake", "parlay", "accumulator"],
+            "Fantasy": ["fantasy", "FPL", "fantasy premier league", "draft", "team selection", "points", "captain", "gameweek"]
         }
         
-        # Moment classification rules (when fans engage with rankings/content)
+        # Moment classification rules (decision-relevant - NO "Evergreen" or "General")
         self.moment_rules = {
-            "pre_match": ["before the game", "preview", "starting lineup", "team news", "pre-match", "before kickoff"],
-            "post_match": ["after the game", "recap", "highlights", "post-match", "match review", "how did", "performance"],
-            "weekly": ["this week", "weekend", "matchweek", "game week", "weekly", "round"],
-            "transfer_window": ["transfer", "signing", "new player", "bought", "sold", "rumor", "transfer news"],
-            "tournament": ["world cup", "champions league", "euros", "tournament", "knockout", "final"],
-            "evergreen": ["all time", "best ever", "greatest", "top 10", "ranking", "compare", "versus"]
+            "PostMatchReaction": ["after the game", "recap", "highlights", "post-match", "match review", "how did", "performance", "player ratings post"],
+            "PreMatchDecision": ["before the game", "preview", "starting lineup", "team news", "pre-match", "before kickoff", "who to start"],
+            "WeeklyFormCheck": ["this week", "weekend", "matchweek", "game week", "weekly", "round", "form guide", "in form"],
+            "FantasyDeadline": ["deadline", "fantasy team", "transfers", "captain choice", "bench", "wildcard", "gameweek picks"],
+            "BettingResearch": ["betting tips", "odds", "prediction", "bet on", "betting strategy", "accumulator tips"],
+            "TransferRumorCycle": ["transfer", "signing", "new player", "bought", "sold", "rumor", "transfer news", "linked with"],
+            "TournamentNarrative": ["world cup", "champions league", "euros", "tournament", "knockout", "final", "semi-final", "quarter"]
         }
         
-        # Job-to-be-done classification rules (what users are trying to accomplish)
+        # Job-to-be-done classification rules (product-relevant - NO "General Inquiry")
         self.job_rules = {
-            "orientation": ["who is", "explain", "help me understand", "what does", "confused", "guide"],
-            "validation": ["am I right", "do you agree", "what do you think", "is this correct", "validate"],
-            "decision_support": ["should I watch", "worth watching", "who to pick", "best choice", "help me decide"],
-            "entertainment": ["fun", "interesting", "enjoy", "entertaining", "exciting"],
-            "social_currency": ["share", "tell my friends", "brag", "show off", "impress", "prove"],
-            "credibility_check": ["reliable", "trustworthy", "accurate", "biased", "source", "methodology"]
+            "OrientationWhoToWatch": ["who is", "who should I watch", "worth watching", "which players", "who are the", "guide to"],
+            "ValidationAmIRight": ["am I right", "do you agree", "what do you think", "is this correct", "validate", "thoughts on"],
+            "DecisionSupportFantasyBetting": ["should I pick", "worth the", "who to captain", "best choice", "help me decide", "pick between"],
+            "DebateStatusProveMyTake": ["prove", "tell my friends", "show them", "hot take", "unpopular opinion", "debate", "argue"],
+            "DiscoveryUnderratedPlayers": ["underrated", "overlooked", "hidden gem", "sleeper", "underappreciated", "slept on"],
+            "TrackingTrendMovement": ["trending", "rising", "dropping", "momentum", "form", "on fire", "losing form", "rank movement"]
         }
         
-        # Theme keywords (aligned with de-risking questions RQ1-RQ5)
+        # Theme keywords (ensure they drive product requirements)
         self.theme_keywords = {
-            "trust": ["trust", "reliable", "accurate", "credible", "biased", "fair", "methodology", "data source"],
-            "explainability": ["why", "how", "explain", "understand", "algorithm", "calculation", "criteria"],
-            "shareability": ["share", "screenshot", "post", "social media", "viral", "tweet", "instagram"],
-            "notifications": ["notify", "alert", "push", "reminder", "update", "notification"],
-            "usability": ["easy", "simple", "intuitive", "user friendly", "navigation", "interface", "design"],
-            "engagement": ["addictive", "keep coming back", "daily", "habit", "retention", "sticky"],
-            "comparison": ["compare", "versus", "vs", "better than", "rank", "tier list"],
-            "personalization": ["my team", "favorite", "customize", "preferences", "filter", "personalize"]
+            "Trust": ["trust", "reliable", "accurate", "credible", "biased", "fair", "methodology", "data source", "transparent"],
+            "Explainability": ["why", "how", "explain", "understand", "algorithm", "calculation", "criteria", "reasoning"],
+            "Shareability": ["share", "screenshot", "post", "social media", "viral", "tweet", "instagram", "shareable"],
+            "Comparison": ["compare", "versus", "vs", "better than", "rank", "tier list", "head to head"],
+            "MovementMomentum": ["momentum", "rising", "falling", "trajectory", "trend", "surge", "decline", "movement"],
+            "NarrativeContext": ["story", "narrative", "context", "background", "why it matters", "storyline"],
+            "Personalization": ["my team", "favorite", "customize", "preferences", "filter", "personalize", "follow"],
+            "NotificationTriggers": ["notify", "alert", "push", "reminder", "update", "notification", "notify me"],
+            "UsabilityFriction": ["easy", "simple", "intuitive", "confusing", "hard to", "difficult", "interface", "navigation"]
         }
         
         # Sentiment keywords
@@ -149,7 +151,8 @@ class TaggerAgent:
         if scores:
             return max(scores, key=scores.get)
         
-        return "general"
+        # Default to Casual segment if no keywords match (most inclusive)
+        return "Casual"
     
     def _classify_moment(self, text: str) -> str:
         """
@@ -171,7 +174,8 @@ class TaggerAgent:
         if scores:
             return max(scores, key=scores.get)
         
-        return "general_interest"
+        # Default to WeeklyFormCheck if no keywords match
+        return "WeeklyFormCheck"
     
     def _classify_job(self, text: str) -> str:
         """
@@ -193,7 +197,8 @@ class TaggerAgent:
         if scores:
             return max(scores, key=scores.get)
         
-        return "general_inquiry"
+        # Default to OrientationWhoToWatch if no keywords match
+        return "OrientationWhoToWatch"
     
     def _classify_themes(self, text: str) -> List[str]:
         """

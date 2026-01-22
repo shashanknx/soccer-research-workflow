@@ -10,7 +10,7 @@ from typing import Dict, Any, List
 # Add parent directory to path to import schemas
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from schemas.evidence_item import ResearchPlan
+from schemas.evidence_item import ResearchPlan, ProductHypothesis
 
 
 class PlannerAgent:
@@ -41,12 +41,57 @@ class PlannerAgent:
         default_config = {
             "research_topic": self.topic,
             "target_segments": [
-                "potential_fan",
-                "casual_fan",
-                "engaged_fan",
-                "bettor",
-                "fantasy_enthusiast"
+                "Potential",
+                "Casual",
+                "Engaged",
+                "Bettor",
+                "Fantasy"
             ],
+            "product_hypothesis": {
+                "product_name": "Billboard-style soccer player rankings app",
+                "goal": "Drive repeat engagement, trust, sharing, and decision support (watch/fantasy/betting) for 18-30 fans",
+                "in_scope_concepts": [
+                    "player rankings",
+                    "player comparison",
+                    "follow players",
+                    "who to watch",
+                    "form",
+                    "momentum",
+                    "rank movement",
+                    "fantasy decisions",
+                    "betting decisions",
+                    "debate",
+                    "shareable takes",
+                    "player narratives",
+                    "team selection based on players",
+                    "overrated",
+                    "underrated",
+                    "ballon d'or",
+                    "player of the week",
+                    "power ranking"
+                ],
+                "out_of_scope_concepts": [
+                    "equipment",
+                    "training",
+                    "boots",
+                    "cleats",
+                    "coaching drills",
+                    "fitness plans",
+                    "academy training",
+                    "how to play",
+                    "youth training",
+                    "shin guards",
+                    "jerseys",
+                    "balls"
+                ],
+                "required_outputs": [
+                    "primary habit moment",
+                    "trust model requirements",
+                    "share artifact spec",
+                    "V1 wedge segment",
+                    "do-not-build list"
+                ]
+            },
             "sources": {
                 "reddit": {
                     "subreddits": ["soccer", "FantasyPL", "SoccerBetting", "footballtactics", "PremierLeague"],
@@ -55,12 +100,12 @@ class PlannerAgent:
                 },
                 "youtube": {
                     "search_terms": [
-                        "player rankings",
-                        "best players 2024",
+                        "player rankings 2024",
+                        "best players right now",
                         "fantasy football tips",
                         "soccer betting analysis",
-                        "player comparison",
-                        "top 10 players"
+                        "player comparison debate",
+                        "overrated underrated players"
                     ],
                     "max_results": 30
                 },
@@ -100,7 +145,10 @@ class PlannerAgent:
                 "form guide",
                 "player ratings",
                 "tier list",
-                "top players"
+                "top players",
+                "overrated",
+                "underrated",
+                "power rankings"
             ],
             "filters": {
                 "min_engagement": 5,

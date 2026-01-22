@@ -102,7 +102,7 @@ class ReportGenerator:
         themes = set(theme for item in evidence_items for theme in item.themes)
         
         context = {
-            "research_topic": "Soccer Equipment and Training Market Research",
+            "research_topic": synthesis_results.get("research_topic", "Billboard-style soccer player rankings app - product de-risking research"),
             "generation_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "total_items": synthesis_results.get("total_items", 0),
             "sources": sources_str,

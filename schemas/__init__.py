@@ -2,6 +2,6 @@
 Schemas Package
 Pydantic models for the Agentic AI Market-Research System.
 """
-from schemas.evidence_item import EvidenceItem, ResearchPlan
+from schemas.evidence_item import EvidenceItem, ResearchPlan, ProductHypothesis
 
-__all__ = ["EvidenceItem", "ResearchPlan"]
+__all__ = ["EvidenceItem", "ResearchPlan", "ProductHypothesis"]
