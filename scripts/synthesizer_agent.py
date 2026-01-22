@@ -70,8 +70,10 @@ class SynthesizerAgent:
         # Validate and filter evidence (remove "General" labels)
         validated_items = self._validate_evidence(evidence_items)
         
+        from datetime import datetime
+        
         results = {
-            "generated_at": str(Path(__file__).parent.parent / "data" / "synthesis_results.json"),
+            "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "totals": self._generate_totals(validated_items),
             "exec_decisions": self._generate_executive_decisions(validated_items),
             "rq1": self._synthesize_rq1(validated_items),
@@ -338,9 +340,9 @@ class SynthesizerAgent:
         """Validate and filter evidence items per spec requirements."""
         validated = []
         for item in items:
-            # Skip items with "General" labels (forbidden pattern)
-            if (item.segment and "general" in item.segment.lower()) or \
-               (item.job and "general" in item.job.lower()):
+            # Skip items with "General" labels (forbidden pattern) - exact match only
+            if (item.segment and item.segment.lower() == "general") or \
+               (item.job and "general_inquiry" in item.job.lower()):
                 continue
             validated.append(item)
         return validated
@@ -718,7 +720,7 @@ class SynthesizerAgent:
             "media_coverage": sum(1 for i in all_items if "media" in i.source.lower() or "article" in i.source.lower()),
             "total_items": len(all_items),
             "dropped_count": len(all_items) - len(validated_items),
-            "dedup_rate": round((len(all_items) - len(validated_items)) / len(all_items) * 100, 1) if all_items else 0,
+            "dedup_rate": 0.0,  # Note: Currently filtering for forbidden patterns, not deduplicating
             "validation_checks": [
                 {"name": "All RQs present (1-5)", "passed": True},
                 {"name": "Each RQ has decision table", "passed": True},
