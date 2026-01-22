@@ -21,7 +21,7 @@ def print_banner():
     banner = """
     ╔══════════════════════════════════════════════════════════╗
     ║   Agentic AI Market-Research System                      ║
-    ║   Soccer Equipment & Training Analysis                   ║
+    ║   Billboard Player Rankings - Product De-Risking         ║
     ╚══════════════════════════════════════════════════════════╝
     """
     print(banner)
@@ -41,7 +41,7 @@ def run_pipeline(use_mock_data: bool = True):
     print("="*60)
     
     # Step 1: Generate research plan
-    planner = PlannerAgent(topic="Soccer equipment and training market research")
+    planner = PlannerAgent(topic="Billboard-style soccer player rankings app - product de-risking research")
     plan = planner.create_plan()
     planner.print_plan_summary(plan)
     plan_path = planner.save_plan(plan)

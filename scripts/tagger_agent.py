@@ -21,47 +21,47 @@ class TaggerAgent:
     """
     
     def __init__(self):
-        """Initialize the Tagger Agent with tagging rules."""
+        """Initialize the Tagger Agent with tagging rules for Billboard player rankings research."""
         
-        # Segment classification rules
+        # Segment classification rules (Billboard player rankings focus)
         self.segment_rules = {
-            "parents": ["parent", "my son", "my daughter", "my kid", "youth", "children"],
-            "youth_players": ["I play", "I'm", "teenager", "student", "high school", "college"],
-            "coaches": ["coach", "coaching", "team training", "practice drills", "tactics"],
-            "amateur_adults": ["amateur", "recreational", "weekend league", "adult league"],
-            "enthusiasts": ["fan", "watch", "follow", "support", "favorite team"]
+            "potential_fan": ["new to soccer", "getting into", "don't know much", "learning about", "just started watching", "beginner"],
+            "casual_fan": ["watch occasionally", "big games", "world cup", "casual", "highlights", "don't follow closely"],
+            "engaged_fan": ["follow closely", "know the players", "watch every game", "fan forum", "statistics", "analysis", "tactics"],
+            "bettor": ["bet", "odds", "gambling", "wager", "prediction", "betting", "stake", "parlay"],
+            "fantasy_enthusiast": ["fantasy", "FPL", "fantasy premier league", "draft", "team selection", "points", "captain"]
         }
         
-        # Moment classification rules
+        # Moment classification rules (when fans engage with rankings/content)
         self.moment_rules = {
-            "purchasing_decision": ["buy", "purchase", "looking for", "recommend", "best", "should I get"],
-            "skill_development": ["improve", "practice", "training", "learn", "develop", "technique"],
-            "team_selection": ["tryout", "selection", "recruiting", "join team", "making the team"],
-            "game_preparation": ["before game", "match day", "preparation", "warm up", "pre-game"],
-            "recovery": ["injury", "recovery", "rest", "healing", "pain", "sore"],
-            "entertainment": ["watch", "game", "match", "video", "highlights", "fun"]
+            "pre_match": ["before the game", "preview", "starting lineup", "team news", "pre-match", "before kickoff"],
+            "post_match": ["after the game", "recap", "highlights", "post-match", "match review", "how did", "performance"],
+            "weekly": ["this week", "weekend", "matchweek", "game week", "weekly", "round"],
+            "transfer_window": ["transfer", "signing", "new player", "bought", "sold", "rumor", "transfer news"],
+            "tournament": ["world cup", "champions league", "euros", "tournament", "knockout", "final"],
+            "evergreen": ["all time", "best ever", "greatest", "top 10", "ranking", "compare", "versus"]
         }
         
-        # Job-to-be-done classification rules
+        # Job-to-be-done classification rules (what users are trying to accomplish)
         self.job_rules = {
-            "find_quality_equipment": ["equipment", "gear", "cleats", "boots", "shin guards", "quality"],
-            "improve_skills": ["skills", "better", "improve", "practice", "training", "drills"],
-            "understand_tactics": ["tactics", "strategy", "formation", "positioning", "game plan"],
-            "stay_motivated": ["motivation", "inspired", "keep going", "passion", "love the game"],
-            "connect_with_community": ["community", "friends", "teammates", "social", "club"],
-            "track_progress": ["progress", "stats", "performance", "tracking", "improvement"]
+            "orientation": ["who is", "explain", "help me understand", "what does", "confused", "guide"],
+            "validation": ["am I right", "do you agree", "what do you think", "is this correct", "validate"],
+            "decision_support": ["should I watch", "worth watching", "who to pick", "best choice", "help me decide"],
+            "entertainment": ["fun", "interesting", "enjoy", "entertaining", "exciting"],
+            "social_currency": ["share", "tell my friends", "brag", "show off", "impress", "prove"],
+            "credibility_check": ["reliable", "trustworthy", "accurate", "biased", "source", "methodology"]
         }
         
-        # Theme keywords
+        # Theme keywords (aligned with de-risking questions RQ1-RQ5)
         self.theme_keywords = {
-            "equipment": ["cleats", "boots", "ball", "shin guards", "gloves", "jersey"],
-            "training": ["training", "practice", "drills", "exercise", "workout"],
-            "youth_soccer": ["youth", "kids", "children", "junior", "u12", "u14", "u16"],
-            "professional": ["pro", "professional", "premier league", "champions league"],
-            "health": ["injury", "fitness", "health", "nutrition", "recovery"],
-            "technology": ["app", "software", "tracking", "analytics", "video"],
-            "cost": ["price", "expensive", "cheap", "budget", "affordable", "cost"],
-            "quality": ["quality", "durable", "lasting", "reliable", "well-made"]
+            "trust": ["trust", "reliable", "accurate", "credible", "biased", "fair", "methodology", "data source"],
+            "explainability": ["why", "how", "explain", "understand", "algorithm", "calculation", "criteria"],
+            "shareability": ["share", "screenshot", "post", "social media", "viral", "tweet", "instagram"],
+            "notifications": ["notify", "alert", "push", "reminder", "update", "notification"],
+            "usability": ["easy", "simple", "intuitive", "user friendly", "navigation", "interface", "design"],
+            "engagement": ["addictive", "keep coming back", "daily", "habit", "retention", "sticky"],
+            "comparison": ["compare", "versus", "vs", "better than", "rank", "tier list"],
+            "personalization": ["my team", "favorite", "customize", "preferences", "filter", "personalize"]
         }
         
         # Sentiment keywords

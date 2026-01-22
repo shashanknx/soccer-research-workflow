@@ -23,9 +23,9 @@ class PlannerAgent:
         Initialize the Planner Agent.
         
         Args:
-            topic: Research topic (default: Soccer market research)
+            topic: Research topic (default: Billboard player rankings research)
         """
-        self.topic = topic or "Soccer equipment and training market research"
+        self.topic = topic or "Billboard-style soccer player rankings app - product de-risking research"
     
     def create_plan(self, custom_config: Dict[str, Any] = None) -> ResearchPlan:
         """
@@ -37,72 +37,76 @@ class PlannerAgent:
         Returns:
             ResearchPlan object
         """
-        # Default plan configuration for soccer market research
+        # Default plan configuration for Billboard player rankings research
         default_config = {
             "research_topic": self.topic,
             "target_segments": [
-                "youth_players",
-                "parents",
-                "coaches",
-                "amateur_adults",
-                "enthusiasts"
+                "potential_fan",
+                "casual_fan",
+                "engaged_fan",
+                "bettor",
+                "fantasy_enthusiast"
             ],
             "sources": {
                 "reddit": {
-                    "subreddits": ["soccer", "bootroom", "youthsoccer", "footballmanagergames"],
-                    "time_filter": "month",
+                    "subreddits": ["soccer", "FantasyPL", "SoccerBetting", "footballtactics", "PremierLeague"],
+                    "time_filter": "year",
                     "sort": "top"
                 },
                 "youtube": {
                     "search_terms": [
-                        "soccer cleats review",
-                        "soccer training equipment",
-                        "youth soccer tips",
-                        "soccer ball review"
+                        "player rankings",
+                        "best players 2024",
+                        "fantasy football tips",
+                        "soccer betting analysis",
+                        "player comparison",
+                        "top 10 players"
                     ],
                     "max_results": 30
                 },
                 "app_store": {
-                    "apps": ["Soccer Stars", "FIFA Mobile", "Score! Hero"],
-                    "review_count": 50
+                    "apps": ["FotMob", "OneFootball", "ESPN Fantasy", "The Athletic", "SofaScore"],
+                    "review_count": 300
                 },
                 "media": {
                     "websites": [
-                        "soccerwire.com",
-                        "topdrawersoccer.com",
-                        "ussoccer.com"
+                        "theringer.com",
+                        "theathletic.com",
+                        "espn.com",
+                        "reddit.com/r/soccer"
                     ],
                     "article_count": 20
                 }
             },
             "quotas": {
-                "reddit": 80,
+                "reddit": 150,
                 "youtube": 30,
-                "app_store": 50,
+                "app_store": 300,
                 "media": 20,
-                "total": 180
+                "total": 500
             },
             "stop_conditions": {
-                "max_total_items": 200,
+                "max_total_items": 500,
                 "time_limit_hours": 48,
-                "min_items_per_source": 10
+                "min_items_per_source": 20
             },
             "keywords": [
-                "soccer",
-                "football",
-                "cleats",
-                "boots",
-                "training",
-                "equipment",
-                "youth",
-                "coaching",
-                "skills",
-                "practice"
+                "player rankings",
+                "best players",
+                "player comparison",
+                "fantasy football",
+                "betting tips",
+                "player stats",
+                "form guide",
+                "player ratings",
+                "tier list",
+                "top players"
             ],
             "filters": {
                 "min_engagement": 5,
                 "language": "en",
-                "exclude_spam": True
+                "exclude_spam": True,
+                "recency_months": 12
             }
         }
         
@@ -187,7 +191,7 @@ def main():
     print("Starting Planner Agent...")
     
     # Create planner
-    planner = PlannerAgent(topic="Soccer equipment and training market research")
+    planner = PlannerAgent(topic="Billboard-style soccer player rankings app - product de-risking research")
     
     # Generate research plan
     plan = planner.create_plan()

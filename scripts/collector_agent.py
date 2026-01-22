@@ -123,7 +123,7 @@ class CollectorAgent:
         return items
     
     def _mock_reddit_data(self) -> List[Dict[str, Any]]:
-        """Generate mock Reddit data for testing."""
+        """Generate mock Reddit data for Billboard player rankings research."""
         quota = min(self.plan.quotas.get("reddit", 50), 50)
         
         mock_posts = [
@@ -131,37 +131,48 @@ class CollectorAgent:
                 "source": "reddit",
                 "source_type": "post",
                 "source_url": "https://reddit.com/r/soccer/comments/{i}",
-                "title": "Discussion about soccer equipment {i}",
-                "content": "Looking for advice on youth soccer cleats. What brands do you recommend for durability and comfort?",
-                "author": "user_{i}",
+                "title": "Who are your top 10 players right now?",
+                "content": "Trying to settle a debate with friends about who the best players are. What makes a player truly elite? Stats alone or watching them play?",
+                "author": "soccer_fan_{i}",
                 "published_at": datetime.now().isoformat(),
-                "upvotes": 15,
-                "comments": 8,
+                "upvotes": 45,
+                "comments": 23,
                 "subreddit": "soccer"
             },
             {
                 "source": "reddit",
                 "source_type": "post",
-                "source_url": "https://reddit.com/r/bootroom/comments/{i}",
-                "title": "Training tips for youth players {i}",
-                "content": "My son just joined a competitive team. What training equipment should we get for home practice?",
-                "author": "soccer_parent_{i}",
+                "source_url": "https://reddit.com/r/FantasyPL/comments/{i}",
+                "title": "Player comparison for this gameweek",
+                "content": "Should I captain Haaland or Salah? Looking at form, fixtures, and recent stats. What do you guys think?",
+                "author": "fpl_addict_{i}",
                 "published_at": datetime.now().isoformat(),
-                "upvotes": 25,
-                "comments": 12,
-                "subreddit": "bootroom"
+                "upvotes": 67,
+                "comments": 34,
+                "subreddit": "FantasyPL"
+            },
+            {
+                "source": "reddit",
+                "source_type": "post",
+                "source_url": "https://reddit.com/r/SoccerBetting/comments/{i}",
+                "title": "Player performance predictions",
+                "content": "Based on recent form and matchups, who do you think will score this weekend? Need some insights for my accumulator.",
+                "author": "betting_pro_{i}",
+                "published_at": datetime.now().isoformat(),
+                "upvotes": 31,
+                "comments": 18,
+                "subreddit": "SoccerBetting"
             }
         ]
         
         items = []
-        for i in range(quota // 2):
+        for i in range(quota // 3 + 1):
             for template in mock_posts:
                 item = template.copy()
                 item["source_url"] = template["source_url"].format(i=i)
-                item["title"] = template["title"].format(i=i)
                 item["author"] = template["author"].format(i=i)
-                item["upvotes"] = template["upvotes"] + i * 2
-                item["comments"] = template["comments"] + i
+                item["upvotes"] = template["upvotes"] + i * 3
+                item["comments"] = template["comments"] + i * 2
                 items.append(item)
                 if len(items) >= quota:
                     break
@@ -171,7 +182,7 @@ class CollectorAgent:
         return items[:quota]
     
     def _mock_youtube_data(self) -> List[Dict[str, Any]]:
-        """Generate mock YouTube data for testing."""
+        """Generate mock YouTube data for Billboard player rankings research."""
         quota = min(self.plan.quotas.get("youtube", 30), 30)
         
         items = []
@@ -180,24 +191,24 @@ class CollectorAgent:
                 "source": "youtube",
                 "source_type": "video",
                 "source_url": f"https://youtube.com/watch?v=video_{i}",
-                "title": f"Best Soccer Cleats Review {2024 - i}",
-                "content": f"In this video, we review the top soccer cleats for youth players. Features, comfort, and durability tested.",
-                "author": f"SoccerReviewer{i}",
+                "title": f"Top 10 Players in the World Right Now | 2024 Rankings",
+                "content": f"Ranking the best players based on current form, statistics, and impact. Who makes the cut? Let me know if you agree with my list!",
+                "author": f"FootballAnalysis{i}",
                 "published_at": datetime.now().isoformat(),
-                "views": 5000 + i * 100,
-                "likes": 250 + i * 5,
-                "comments": 45 + i,
+                "views": 15000 + i * 500,
+                "likes": 890 + i * 15,
+                "comments": 234 + i * 3,
                 "duration": "12:34"
             })
         
         return items
     
     def _mock_app_store_data(self) -> List[Dict[str, Any]]:
-        """Generate mock app store review data for testing."""
+        """Generate mock app store review data for Billboard player rankings research."""
         quota = min(self.plan.quotas.get("app_store", 50), 50)
         
         items = []
-        apps = ["Soccer Stars", "FIFA Mobile", "Score! Hero"]
+        apps = ["FotMob", "OneFootball", "ESPN Fantasy", "SofaScore", "The Athletic"]
         
         for i in range(quota):
             app = apps[i % len(apps)]
@@ -206,18 +217,18 @@ class CollectorAgent:
                 "source_type": "review",
                 "source_url": f"https://apps.apple.com/app/{app.lower().replace(' ', '-')}/review_{i}",
                 "title": f"Review of {app}",
-                "content": f"Great soccer game! Really helps understand tactics and player positioning. My kids love it.",
-                "author": f"AppUser{i}",
+                "content": f"Love the player ratings and comparisons! Wish there was a way to see historical rankings and share my predictions with friends.",
+                "author": f"FootballFan{i}",
                 "published_at": datetime.now().isoformat(),
                 "rating": 4 + (i % 2),
-                "helpful_count": 10 + i,
+                "helpful_count": 15 + i,
                 "app_name": app
             })
         
         return items
     
     def _mock_media_data(self) -> List[Dict[str, Any]]:
-        """Generate mock media article data for testing."""
+        """Generate mock media article data for Billboard player rankings research."""
         quota = min(self.plan.quotas.get("media", 20), 20)
         
         items = []
@@ -225,13 +236,13 @@ class CollectorAgent:
             items.append({
                 "source": "media",
                 "source_type": "article",
-                "source_url": f"https://soccerwire.com/article/youth-training-{i}",
-                "title": f"Youth Soccer Training Guide {i}",
-                "content": f"Essential equipment for youth soccer training includes quality cleats, shin guards, and practice balls. Coaches recommend...",
-                "author": f"Sports Writer {i}",
+                "source_url": f"https://theathletic.com/article/player-rankings-{i}",
+                "title": f"Power Rankings: The 50 Best Players in World Football",
+                "content": f"Our data-driven approach combines stats, expert analysis, and impact to rank the world's elite players. Featuring breakdowns of why each player earned their spot...",
+                "author": f"Athletic Staff Writer {i}",
                 "published_at": datetime.now().isoformat(),
-                "shares": 50 + i * 3,
-                "website": "soccerwire.com"
+                "shares": 125 + i * 8,
+                "website": "theathletic.com"
             })
         
         return items
